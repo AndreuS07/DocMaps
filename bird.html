@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Pixelify+Sans:wght@600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
+<title>Flappy Bird</title>
+</head>
+<style>
+body {
+    margin: 0;
+    overflow: hidden;
+    background-image: url(img-G/1.jpg);
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed; 
+  }
+
+
+canvas {
+    display: block;
+    margin: auto;
+    border: 3px solid #555555;
+    border-radius: 25px;
+    margin-top: 7%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.hidden {
+    display: none;
+}
+
+#gameOver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#gameOver button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.gameButton {
+    margin-right: 5px;
+    border: 2px solid rgb(146, 146, 146);
+    border-radius: 5px;
+}
+
+.buttonContainer {
+    margin-top: 10px;
+}
+
+.letra {
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5ch;
+  }
+
+
+.sco{
+    font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 3.5ch;
+}
+
+.gameButtonFont {
+    font-family:"Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: medium;
+}
+
+
+.fla{
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 7ch;
+    position: absolute;
+    top: 2%;
+    left: 39.5%;
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background-image: url(img-G/1.jpg);
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed; 
+    
+  }
+
+
+canvas {
+    display: block;
+    margin: auto;
+    border: 3px solid #555555;
+    border-radius: 25px;
+    margin-top: 7%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+#gameCanvas{
+width: 87%;
+margin-left: 6%;
+margin-top: 50%;
+}
+
+.hidden {
+    display: none;
+}
+
+#gameOver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#gameOver button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.gameButton {
+    margin-right: 5px;
+    border: 2px solid rgb(146, 146, 146);
+    border-radius: 5px;
+}
+
+.buttonContainer {
+    margin-top: 10px;
+}
+
+.letra {
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5ch;
+  }
+
+
+.sco{
+    font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 3.5ch;
+}
+
+.gameButtonFont {
+    font-family:"Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: medium;
+}
+
+
+.fla{
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 7ch;
+    position: absolute;
+    top: 2%;
+    left: 21.5%;
+
+}}
+</style>
+
+<body>
+    <h1 class="fla">FLAPPY COIN</h1>
+    <canvas id="gameCanvas" width="480" height="640"></canvas>
+    <div id="gameOver" class="hidden">
+        <p class="letra">Game Over</p>
+        <p class="sco">Score: <span id="finalScore">0</span></p>
+        <div class="buttonContainer"></div>
+    </div>    
+    <script>
+var canvas = document.getElementById("gameCanvas");
+var ctx = canvas.getContext("2d");
+
+var bird = { x: 50, y: canvas.height / 2, radius: 20, speedY: 0, gravity: 0.2 };
+var pipes = [];
+var coins = [];
+var bombs = []; 
+var score = 0;
+var gameSpeed = 2;
+var isGameOver = false;
+var restartCountdown = 3;
+var gameInterval;
+var backgroundImg = new Image();
+backgroundImg.src = "img-G/fondo.png";
+var bgX = 0;
+var gameStarted = false; 
+
+var birdImg = new Image();
+birdImg.src = "img-G/bird.png";
+
+var pipeTopImg = new Image();
+pipeTopImg.src = "img-G/pipeTop.png";
+
+var pipeBottomImg = new Image();
+pipeBottomImg.src = "img-G/pipeBottom.png";
+
+var coinImg = new Image();
+coinImg.src = "img-G/moneda.png"; 
+
+var bombImg = new Image();
+bombImg.src = "img-G/bomba.png"; 
+
+document.addEventListener("keydown", handleKeyDown);
+canvas.addEventListener("click", handleCanvasClick);
+
+function handleKeyDown(event) {
+    if (event.keyCode === 32 && !gameStarted && !isGameOver) { 
+        startGame(); 
+    } else if (event.keyCode === 32 && !isGameOver) { 
+        bird.speedY = -7; 
+    }
+}
+
+function handleCanvasClick(event) {
+    if (!gameStarted && !isGameOver) { 
+        startGame(); 
+    } else if (!isGameOver) { 
+        bird.speedY = -7; 
+    }
+}
+
+coins.push({ x: 300, y: 100, width: 70, height: 70 });
+bombs.push({ x: 500, y: 250, radius: 10 });
+
+var initialState = {
+    bird: Object.assign({}, bird),
+    pipes: pipes.slice(),
+    coins: coins.slice(),
+    bombs: bombs.slice(),
+    score: score,
+    gameSpeed: gameSpeed
+};
+
+function drawBackground() {
+    ctx.drawImage(backgroundImg, bgX, 0, canvas.width, canvas.height);
+    ctx.drawImage(backgroundImg, bgX + canvas.width, 0, canvas.width, canvas.height);
+}
+
+function drawBird() {
+    ctx.drawImage(birdImg, bird.x - bird.radius, bird.y - bird.radius, bird.radius * 2, bird.radius * 2);
+}
+
+function drawPipes() {
+    for (var i = 0; i < pipes.length; i++) {
+        var pipe = pipes[i];
+        ctx.drawImage(pipeTopImg, pipe.x, pipe.y - pipeTopImg.height);
+        ctx.drawImage(pipeBottomImg, pipe.x, pipe.y + pipe.gap);
+    }
+}
+
+function drawCoins() {
+    for (var i = 0; i < coins.length; i++) {
+        var coin = coins[i];
+        ctx.drawImage(coinImg, coin.x, coin.y, coin.width, coin.height);
+    }
+}
+
+function drawBombs() {
+    for (var i = 0; i < bombs.length; i++) {
+        var bomb = bombs[i];
+        ctx.drawImage(bombImg, bomb.x - bomb.radius, bomb.y - bomb.radius, bomb.radius * 2, bomb.radius * 2);
+    }
+}
+
+function updateBird() {
+    if (!gameStarted) return;
+
+    bird.y += bird.speedY;
+    bird.speedY += bird.gravity;
+
+    if (bird.y + bird.radius > canvas.height) {
+        gameOver();
+    }
+
+    if (bird.y - bird.radius < 0) {
+        bird.y = bird.radius;
+        bird.speedY = 1;
+    }
+
+    for (var i = 0; i < coins.length; i++) {
+        var coin = coins[i];
+        if (
+            bird.x + bird.radius > coin.x &&
+            bird.x - bird.radius < coin.x + coin.width &&
+            bird.y + bird.radius > coin.y &&
+            bird.y - bird.radius < coin.y + coin.height
+        ) {
+            coins.splice(i, 1); 
+            score++; 
+            i--;
+        }
+    }
+
+    for (var i = 0; i < bombs.length; i++) {
+        var bomb = bombs[i];
+        var distance = Math.sqrt(Math.pow(bird.x - bomb.x, 2) + Math.pow(bird.y - bomb.y, 2));
+        if (distance < bird.radius + bomb.radius) {
+            gameOver(); 
+        }
+    }
+}
+
+function updatePipes() {
+    if (gameSpeed % 120 === 0) {
+        var gap = 200;
+        var pipeY = Math.floor(Math.random() * (canvas.height - gap - 100)) + 50;
+        pipes.push({ x: canvas.width, y: pipeY, gap: gap });
+    }
+
+    for (var i = 0; i < pipes.length; i++) {
+        var pipe = pipes[i];
+        pipe.x -= gameSpeed;
+
+        if (
+            bird.x + bird.radius > pipe.x &&
+            bird.x - bird.radius < pipe.x + pipeTopImg.width &&
+            (bird.y - bird.radius < pipe.y || bird.y + bird.radius > pipe.y + pipe.gap)
+        ) {
+            gameOver();
+        }
+
+        if (pipe.x < -pipeTopImg.width) {
+            pipes.splice(i, 1);
+            i--;
+        }
+
+        if (bird.x > pipe.x + pipeTopImg.width && !pipe.passed) {
+            pipe.passed = true;
+            score++;
+        }
+    }
+}
+
+function updateCoins() {
+    for (var i = 0; i < coins.length; i++) {
+        var coin = coins[i];
+        coin.x -= gameSpeed;
+
+        if (coin.x < -coin.width) {
+            coins.splice(i, 1);
+            i--;
+        }
+    }
+}
+
+function updateBombs() {
+    for (var i = 0; i < bombs.length; i++) {
+        var bomb = bombs[i];
+        bomb.x -= gameSpeed;
+
+        if (bomb.x < -bomb.radius) {
+            bombs.splice(i, 1);
+            i--;
+        }
+    }
+}
+
+function gameOver() {
+    isGameOver = true;
+    clearInterval(gameInterval);
+    var gameOverElement = document.getElementById("gameOver");
+    gameOverElement.classList.remove("hidden");
+    document.getElementById("finalScore").textContent = score;
+
+    var existingButtons = document.querySelectorAll("#gameOver button");
+    if (existingButtons) {
+        existingButtons.forEach(button => {
+            button.remove();
+        });
+    }
+
+    var restartButton = document.createElement("button");
+    restartButton.textContent = "Reiniciar";
+    restartButton.classList.add("gameButton");
+    restartButton.classList.add("gameButtonFont"); 
+    restartButton.addEventListener("click", restartGame);
+    gameOverElement.appendChild(restartButton);
+
+    var quitButton = document.createElement("button");
+    quitButton.textContent = "Salir";
+    quitButton.classList.add("gameButton");
+    quitButton.classList.add("gameButtonFont"); 
+    quitButton.addEventListener("click", quitGame);
+    gameOverElement.appendChild(quitButton);
+}
+
+function quitGame() {
+    window.location.href = "juegos.html"; 
+}
+
+function restartGame() {
+    bird = Object.assign({}, initialState.bird);
+    pipes = initialState.pipes.slice();
+    coins = initialState.coins.slice();
+    bombs = initialState.bombs.slice();
+    score = initialState.score;
+    gameSpeed = initialState.gameSpeed;
+    isGameOver = false;
+    restartCountdown = 3;
+    document.getElementById("gameOver").classList.add("hidden");
+    gameStarted = false; 
+}
+
+function startGame() {
+    gameStarted = true;
+    gameInterval = setInterval(function () {
+        gameSpeed += 0.0005; 
+        bgX -= 1; 
+        if (bgX <= -canvas.width) {
+            bgX = 0;
+        }
+        generateCoins(); 
+        generateBombs(); 
+    }, 1000 / 60); 
+}
+
+function generateCoins() {
+    if (Math.random() < 0.01) { 
+        var coinY = Math.random() * (canvas.height - 30); 
+        coins.push({ x: canvas.width, y: coinY, width: 40, height: 40 }); 
+    }
+}
+
+function generateBombs() {
+    if (Math.random() < 0.005) { 
+        var bombY = Math.random() * (canvas.height - 50); 
+        bombs.push({ x: canvas.width, y: bombY, radius: 15 });
+    }
+}
+
+function drawScore() {
+    ctx.fillStyle = "black";
+    ctx.font = "20px Arial bolder";
+    ctx.fillText("Score: " + score, 20, 30);
+}
+
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawBackground();
+    drawPipes();
+    drawCoins(); 
+    drawBombs();
+    drawBird();
+    drawScore();
+
+    if (!isGameOver) {
+        updatePipes();
+        updateCoins(); 
+        updateBombs();
+        updateBird();
+    }
+
+    requestAnimationFrame(draw);
+}
+
+Promise.all([birdImg.onload, pipeTopImg.onload, pipeBottomImg.onload, coinImg.onload, bombImg.onload, backgroundImg.onload]).then(() => {
+    draw();
+});
+
+    </script>
+</body>
+</html>

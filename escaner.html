@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escáner</title>
+    <link rel="icon" href="img/icon/esc1.png" alt="img/icon">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Clash Display', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            background-image: url(img/fond.png);
+            color: #000000;
+           
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 5% auto;
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.842);
+        }
+
+        h1 {
+            margin-top: 2%;
+            margin-bottom: 1.5%;
+            color: #000000;
+        }
+
+        video {
+            width: 100%;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        #status {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        #result {
+            margin-top: 10px;
+            color: green;
+            font-weight: bold;
+        }
+
+        #error-message {
+            margin-top: 10px;
+            color: red;
+            font-weight: bold;
+        }
+
+        #history {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        #history li {
+            margin-bottom: 10px;
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: right;
+        }
+
+        .qr-text {
+            flex: 1;
+            overflow-wrap: break-word;
+        }
+
+        .action-btn {
+            font-family: 'Clash Display', sans-serif;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .action-btn:hover {
+            background-color: #f76977;
+        }
+
+        .clear-btn {
+            margin-top: 20px;
+        }
+
+        .action-btn1 {
+            font-family: 'Clash Display', sans-serif;
+            background-color: #091242;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .action-btn1:hover {
+            background-color: #7b88ff;
+        }
+
+        #back-btn {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 17px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #ffffff;
+            color: #000000;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #back-btn:hover {
+            background-color: #979797;
+        }
+        @media screen and (max-width: 768px) {
+            body {
+            font-family: 'Clash Display', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            background-image: url(img/fond.png);
+            color: #000000;
+           
+        }
+
+        .container {
+            max-width: 330px;
+            margin: 5% auto;
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.842);
+            margin-left: 5.5%;
+            margin-top: 30%;
+        }
+
+        h1 {
+            margin-top: 2%;
+            margin-bottom: 1.5%;
+            color: #000000;
+        }
+
+        video {
+            width: 100%;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        #status {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        #result {
+            margin-top: 10px;
+            color: green;
+            font-weight: bold;
+        }
+
+        #error-message {
+            margin-top: 10px;
+            color: red;
+            font-weight: bold;
+        }
+
+        #history {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        #history li {
+            margin-bottom: 10px;
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: right;
+        }
+
+        .qr-text {
+            flex: 1;
+            overflow-wrap: break-word;
+        }
+
+        .action-btn {
+            font-family: 'Clash Display', sans-serif;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .action-btn:hover {
+            background-color: #f76977;
+        }
+
+        .clear-btn {
+            margin-top: 20px;
+        }
+
+        .action-btn1 {
+            font-family: 'Clash Display', sans-serif;
+            background-color: #091242;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .action-btn1:hover {
+            background-color: #7b88ff;
+        }
+
+        #back-btn {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 17px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #ffffff;
+            color: #000000;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #back-btn:hover {
+            background-color: #979797;
+        }
+        }
+    </style>
+</head>
+<body>
+    <button id="back-btn">Atrás</button>
+    <div class="container">
+        <h1>Escáner de QR</h1>
+        <video id="qr-video" autoplay playsinline></video>
+        <div id="status"></div>
+        <div id="result"></div>
+        <div id="error-message"></div>
+        <h2>Historial de Escaneos</h2>
+        <ul id="history"></ul>
+        <button class="action-btn clear-btn" style="margin-left: 65%;">Borrar Historial</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@2.0.2/build/jsQR.min.js"></script>
+    <script>
+        const video = document.getElementById('qr-video');
+        const statusContainer = document.getElementById('status');
+        const resultContainer = document.getElementById('result');
+        const errorMessageContainer = document.getElementById('error-message');
+        const historyList = document.getElementById('history');
+        const clearBtn = document.querySelector('.clear-btn');
+        const backBtn = document.getElementById('back-btn');
+
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        const isMobile = isMobileDevice();
+
+        backBtn.addEventListener('click', () => {
+            window.history.back();
+        });
+
+        if (!isMobile && navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            // Alerta si el escáner no está disponible en un ordenador
+            alert("El escáner de QR no está disponible en este dispositivo.");
+        } else if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            // Acceder al escáner si está disponible
+            navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } })
+                .then(stream => {
+                    video.srcObject = stream;
+                    video.onloadedmetadata = () => {
+                        video.play();
+                        statusContainer.textContent = 'Cámara activada, escaneando...';
+                        const scanner = new QrScanner(video, result => {
+                            resultContainer.textContent = `Resultado: ${result}`;
+                            addToHistory(result);
+                            statusContainer.textContent = '';
+                            errorMessageContainer.textContent = '';
+                        });
+                        scanner.start();
+                    };
+                })
+                .catch(err => {
+                    console.error('Error al acceder a la cámara:', err);
+                    statusContainer.textContent = 'Error al acceder a la cámara.';
+                });
+        } else {
+            // Alerta si el escáner no está disponible en un dispositivo móvil
+            alert("El escáner de QR no está disponible en este dispositivo.");
+        }
+
+        function addToHistory(result) {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `
+                <span class="qr-text">${result}</span>
+                
+                <button class="action-btn remove-btn">Eliminar</button>
+                <button class="action-btn copy-btn" style="margin-left: 10px; background-color: #15832d">Copiar</button>
+                <button class="action-btn1 open-btn" style="margin-left: 10px;">Abrir</button>
+            `;
+            historyList.appendChild(listItem);
+
+            const copyBtn = listItem.querySelector('.copy-btn');
+            copyBtn.addEventListener('click', () => {
+                navigator.clipboard.writeText(result)
+                    .then(() => {
+                        resultContainer.textContent = '¡El resultado se ha copiado al portapapeles!';
+                    })
+                    .catch(err => {
+                        console.error('Error al copiar al portapapeles:', err);
+                        resultContainer.textContent = 'Error al copiar al portapapeles.';
+                    });
+            });
+
+            const openBtn = listItem.querySelector('.open-btn');
+            openBtn.addEventListener('click', () => {
+                window.open(result, '_blank');
+            });
+
+            const removeBtn = listItem.querySelector('.remove-btn');
+            removeBtn.addEventListener('click', () => {
+                historyList.removeChild(listItem);
+            });
+        }
+
+        clearBtn.addEventListener('click', () => {
+            historyList.innerHTML = '';
+        });
+
+        // Ejemplos predefinidos en el historial
+        const exampleData = ['example.es', '123456', 'Hello World'];
+        exampleData.forEach(addToHistory);
+    </script>
+</body>
+</html>

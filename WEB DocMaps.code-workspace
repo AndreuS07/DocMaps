@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "WEB DocMaps",
+			"path": "."
+		},
+		{
+			"name": "cafes",
+			"path": "../../cafes"
+		}
+	],
+	"settings": {}
+}

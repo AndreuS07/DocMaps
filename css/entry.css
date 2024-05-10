@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #303030; /* Cambiamos el fondo a un gris oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+
+  }
+  
+  .login-container {
+    width: 100vh;
+    height: 29vh;
+    margin-left: 110vh;
+    margin-right: 45vh;
+    padding: 5vh;
+    color: white;
+    background-color: #000000;
+    border-radius: 15px; /* Redondeamos los bordes del contenedor */
+    box-shadow: 0 0 10px rgba(114, 114, 114, 0.63); /* Agregamos sombra */
+  text-align: center;
+  font-size: larger;
+  }
+  
+  .login-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-container form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .login-container form label {
+    margin-bottom: 10px;
+  }
+  
+  .login-container form input[type="text"],
+  .login-container form input[type="password"] {
+    
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Redondeamos los bordes de los campos de entrada */
+  
+  }
+  
+  .login-container form button[type="submit"] {
+
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.6ch;
+
+    padding: 12px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px; /* Redondeamos los bordes del botón */
+    cursor: pointer;
+
+    
+    
+  }
+  
+  .login-container form button[type="submit"]:hover {
+    background-color: darkred;
+  }
+  
+  /* Ajustamos la posición de la imagen */
+  img {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 20vh;
+    max-width: 45%;
+  }
+  
+.ini{
+  margin-top: -4.5vh;
+}
+
+
+.botsu{
+margin-top: 3.5vh;
+}
+
+.corsin{
+  max-width: 14.3%;
+  margin-left: 12.4%;
+  position: fixed;
+}
+
+/*
+FUENTE CASH DISPLAY
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&display=swap" rel="stylesheet">
+
+font-family: 'Clash Display', sans-serif;
+*/

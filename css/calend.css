@@ -1,0 +1,271 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222222;
+    margin: 0;
+    padding: 0;
+    font-family: 'Clash Display', sans-serif;
+
+}
+
+.container {
+    max-width: 800px;
+    margin: 70px auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(194, 194, 194, 0.719);
+    position: relative;
+    font-family: 'Clash Display', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #252525;
+    font-size: 3.3ch;
+}
+
+.controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+}
+
+.month {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.day-name {
+    font-weight: bold;
+    text-align: center;
+}
+
+.day {
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.day:hover {
+    background-color: #f0f0f0;
+}
+
+.today {
+    background-color: #ffcccb;
+}
+
+.event {
+    background-color: #6ca6e9;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+button {
+    background-color: #424242;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #2e2e2e;
+}
+
+.fo, .foi{
+    width: 20px;
+    
+}
+
+.btn-back {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 100;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #616161;
+    color: #fff;
+    border: none;
+    padding: 11px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.btn-back:hover {
+    background-color: #353535;
+}
+.button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: larger;
+  }
+
+@media screen and (max-width: 768px) {
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #222222;
+    margin: 0;
+    padding: 0;
+    font-family: 'Clash Display', sans-serif;
+
+}
+
+.container {
+    max-width: 300px;
+    height: 403px;
+    margin: 75px auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(194, 194, 194, 0.719);
+    position: relative;
+    font-family: 'Clash Display', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #252525;
+    font-size: 3.3ch;
+}
+
+.controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 0.3fr);
+    grid-gap: 2px;
+    margin-left: -3.5%;
+}
+
+.month {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.day-name {
+    font-weight: bold;
+    text-align: center;
+}
+
+.day {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.day:hover {
+    background-color: #f0f0f0;
+}
+
+.today {
+    background-color: #ffcccb;
+}
+
+.event {
+    background-color: #6ca6e9;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+button {
+    background-color: #424242;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #2e2e2e;
+}
+
+.fo, .foi{
+    width: 20px;
+    
+}
+
+.btn-back {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 100;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #616161;
+    color: #fff;
+    border: none;
+    padding: 11px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.btn-back:hover {
+    background-color: #353535;
+}
+.button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: larger;
+  }}

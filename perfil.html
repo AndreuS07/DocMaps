@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil</title>
+    <link rel="icon" href="img/corsin.png" alt="img/icon">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&display=swap" rel="stylesheet">
+    <style>
+     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+body{
+    background-image: url(img/fond.png);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Clash Display', sans-serif;
+}
+section {
+    position: relative;
+    min-height: 90vh;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    perspective: 1000px;
+    margin-left: 5%;
+}
+section::before {
+    content: "";
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    transform: translate(-150px, -100px);
+    background: linear-gradient(90deg, #311B92, #f3f5f5);
+}
+section::after {
+    content: "";
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    transform: translate(150px, 100px);
+    background: linear-gradient(90deg, #311B92, #f3f5f5);
+}
+.container {
+    position: relative;
+    height: 565px;
+    width: 775px;
+    z-index: 100;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+.container .card {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 25px;
+    border-radius: 25px;
+    backdrop-filter: blur(25px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backface-visibility: hidden;
+}
+.front-face header,
+.front-face .logo {
+    display: flex;
+    align-items: center;
+}
+.front-face header {
+    justify-content: space-between;
+}
+.front-face .logo img {
+    width: 48px;
+    margin-right: 10px;
+}
+h5 {
+    font-size: 16px;
+    font-weight: 400;
+}
+.front-face .chip {
+    width: 50px;
+}
+.front-face .card-details {
+    display: flex;
+    margin-top: 40px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.button {
+    position: absolute;
+    top: 15px;
+    left: -80px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: larger;
+  }
+.uno{
+    font-size: 1.7ch;
+    font-family: 'Clash Display', sans-serif;
+    margin-top: 4%;
+}
+.un{
+    font-size: 1.7ch;
+    font-family: 'Clash Display', sans-serif;
+}
+.do{
+    font-size: 2.2ch;
+    font-family: 'Clash Display', sans-serif;
+}
+.mini{
+    position: absolute;
+    margin-top: 9%;
+    margin-left: 33%;
+}
+.fotperf{
+    margin-bottom: 23%;
+    margin-left: 4%;
+
+}
+.name{
+    margin-left: -112%;
+}
+
+@media screen and (max-width: 768px) {
+ @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+body{
+    background-image: url(img/fond.png);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Clash Display', sans-serif;
+}
+section {
+    position: relative;
+    min-height: 90vh;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    perspective: 1000px;
+    margin-left: 5%;
+}
+section::before {
+    content: "";
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    transform: translate(-150px, -100px);
+    background: linear-gradient(90deg, #311B92, #f3f5f5);
+}
+section::after {
+    content: "";
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    transform: translate(150px, 100px);
+    background: linear-gradient(90deg, #311B92, #f3f5f5);
+}
+.container {
+    position: relative;
+    height: 565px;
+    width: 775px;
+    z-index: 100;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+.container .card {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 25px;
+    border-radius: 25px;
+    backdrop-filter: blur(25px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backface-visibility: hidden;
+}
+.front-face header,
+.front-face .logo {
+    display: flex;
+    align-items: center;
+}
+.front-face header {
+    justify-content: space-between;
+}
+.front-face .logo img {
+    width: 48px;
+    margin-right: 10px;
+}
+h5 {
+    font-size: 16px;
+    font-weight: 400;
+}
+.front-face .chip {
+    width: 50px;
+}
+.front-face .card-details {
+    display: flex;
+    margin-top: 40px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.button {
+    position: absolute;
+    top: 20px;
+    left: 3px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: larger;
+  }
+.uno{
+    font-size: 1.7ch;
+    font-family: 'Clash Display', sans-serif;
+    margin-top: 4%;
+}
+.un{
+    font-size: 1.7ch;
+    font-family: 'Clash Display', sans-serif;
+}
+.do{
+    font-size: 2.2ch;
+    font-family: 'Clash Display', sans-serif;
+}
+.mini{
+    position: absolute;
+    margin-top: 7%;
+    margin-left: 56.5%;
+}
+.fotperf{
+    position: absolute;
+    margin-bottom: 20%;
+    margin-left: 2%;
+
+}
+.name{
+    margin-left: 0%;
+    margin-top: 20%;
+    font-size: 1.3ch;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+    <section>
+        <a href="first.html" class="button">Atrás</a>
+      <div class="container">
+        <div class="card front-face">
+          <header>
+        
+              <p style="margin-bottom: -4%; font-size: 2.7ch;">PERFIL</p>
+            
+          </header>
+          <div class="card-details">
+            <img class="fotperf" src="img/fotperfil1.png" style="width: 39%;">
+            <div class="name-number">
+              <p class="uno">NOMBRE:</p>
+              <p class="do">Fernando Williams Smith</p><br>
+              <p class="un">DNI:</p>
+              <p class="do">98475945V</p><br>
+              <p class="un">Nº Seguridad Social:</p>
+              <p class="do">09458058498</p><br>
+              <p class="un">TELEFONO:</p>
+              <p class="do">+77 - 594 - 5804 - 5309</p><br>
+              
+              <img class="mini" src="img/corsin.png" style="width: 85px;"/>
+              <br><br><br><br><br><br><br>
+              <h5 class="name">Fecha de dado de alta, 7 de febrero de 2025</h5>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+/* This is the basic structure of the responsive CSS */
+
+/* Apply a natural box layout model to all elements */
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Base styles */
+  body {
+    font-family: 'Arial', sans-serif;
+    background: #000; /* Assuming you want a black background as in the image */
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: -30vh;
+  }
+  
+  img {
+    max-width: 100%;
+    margin-top: 15%;
+    height: auto;
+    display: block; /* Remove default inline spacing */
+  }

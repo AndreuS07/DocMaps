@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/icoi.ico">
+    <title>Login</title>
+  </head>
+  <style>
+    body {
+      background-color: rgb(0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1 {
+      margin-top: -10%;
+      margin-bottom: 2%;
+    }
+
+    .container-page {
+      height: 50vh;
+      width: 20vw;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      transition: all 0.8s;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid white;
+      backdrop-filter: blur(10px);
+    }
+
+    .login-container {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+    }
+
+    form {
+      width: 80%;
+      margin: auto;
+    }
+
+    .input-line-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 100%;
+      margin: 1rem 0;
+      font-weight: bold;
+    }
+
+    .name-input {
+      font-size: 15px;
+    }
+
+    .input-line {
+      width: 100%;
+      height: 30px;
+      background-color: transparent;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 2px solid #CBCBCB;
+      outline: none;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .button-login {
+      width: 100%;
+      height: 45px;
+      border-radius: 55px;
+      background: rgba(255, 255, 255, 0.089);
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      border: none;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .button-second {
+      width: 100%;
+      height: 45px;
+      border-radius: 55px;
+      background: transparent;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      border: 2px solid white;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: all 0.4s ease-in-out;
+      opacity: 0.6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .button-login:hover {
+      box-shadow: 0px 0px 8px #ffffff74;
+    }
+
+    .button-second:hover {
+      opacity: 1;
+    }
+
+    .gif1 {
+      display: flex;
+      height: 70vh;
+    }
+
+    .gif1 video {
+      max-width: 100%;
+      max-height: 100%;
+      margin-top: 10%;
+    }
+
+    .link {
+      text-decoration: none;
+      color: inherit;
+    }
+    @media screen and (max-width: 768px) {
+      body {
+      background-color: rgb(0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1 {
+      margin-top: -10%;
+      margin-bottom: 2%;
+    }
+
+    .container-page {
+      height: 45vh;
+      width: 65vw;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      transition: all 0.8s;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid white;
+      backdrop-filter: blur(10px);
+      margin-bottom: -64%;
+    }
+
+    .login-container {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+    }
+
+    form {
+      width: 80%;
+      margin: auto;
+      margin-bottom: -17%;
+      margin-top: 7%;
+    }
+
+    .input-line-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 100%;
+      margin: 1rem 0;
+      font-weight: bold;
+    }
+
+    .name-input {
+      font-size: 15px;
+    }
+
+    .input-line {
+      width: 100%;
+      height: 30px;
+      background-color: transparent;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 2px solid #CBCBCB;
+      outline: none;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .button-login {
+      width: 100%;
+      height: 45px;
+      border-radius: 55px;
+      background: rgba(255, 255, 255, 0.089);
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      border: none;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .button-second {
+      width: 100%;
+      height: 45px;
+      border-radius: 55px;
+      background: transparent;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      border: 2px solid white;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: all 0.4s ease-in-out;
+      opacity: 0.6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .button-login:hover {
+      box-shadow: 0px 0px 8px #ffffff74;
+    }
+
+    .button-second:hover {
+      opacity: 1;
+    }
+
+    .gif1 {
+      display: flex;
+      height: 70vh;
+    }
+
+    .gif1 video {
+      position: absolute;
+      max-width: 95%;
+      max-height: 95%;
+      margin-top: -35%;
+      margin-left: -10.2%;
+    }
+
+    .link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    }
+  </style>
+  <body>
+    <div class="gif1">
+      <video autoplay muted loop>
+        <source src="img/vid.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="container-page" id="Container">
+      <div class="login-container" id="LoginContainer">
+        <h1 class="title">LOG IN</h1>
+        <form id="loginForm">
+          <div class="input-line-container">
+            <span class="name-input">Username</span>
+            <input type="text" name="username" class="input-line" id="username">
+          </div>
+          <div class="input-line-container">
+            <span class="name-input">Password</span>
+            <input type="password" name="password" class="input-line" id="password">
+          </div>
+          <input type="button" value="login" class="button-login" id="loginButton">
+          <a href="register.html" class="link">
+            <div id="Register" class="button-second">Register</div>
+          </a>
+        </form>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var loginButton = document.getElementById('loginButton');
+        loginButton.addEventListener('click', function() {
+          var usernameInput = document.getElementById('username');
+          var passwordInput = document.getElementById('password');
+          var username = usernameInput.value;
+          var password = passwordInput.value;
+
+          if (username === 'admin' && password === '1234') {
+            var loginContainer = document.getElementById('Container');
+            var gifContainer = document.querySelector('.gif1');
+
+            loginContainer.style.opacity = '0';
+
+            gifContainer.style.transition = 'all 3s ease-in-out';
+            gifContainer.style.transform = 'scale(1.48)';
+
+            setTimeout(function() {
+              window.location.href = 'first.html';
+            }, 2000);
+          } else {
+            alert('Usuario o contraseña incorrectos');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

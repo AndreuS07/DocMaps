@@ -1,0 +1,94 @@
+/* Estilos adaptados para dispositivos móviles */
+@media screen and (max-width: 768px) {
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin-top: 6%;
+  margin-right: 90%;
+  background-color: #000000;
+}
+
+.container {
+  width: 120%;
+
+  overflow: hidden;
+}
+
+.page {
+  width: 100%;
+  height: auto; /* Cambiado a auto para adaptarse al contenido */
+  display: flex;
+  flex-direction: column; /* Cambiado a columna para una mejor disposición en móviles */
+  align-items: center;
+  padding: 20px; /* Añadido espacio alrededor del contenido */
+  font-size: 2em; /* Reducido el tamaño de fuente para dispositivos móviles */
+}
+
+/* Estilos específicos para cada sección (puedes ajustar según necesites) */
+#section1 {
+  background-color: #000000;
+  margin-left: -2%;
+ max-width: 100%;
+ max-height: 100%;
+  
+}
+
+#logo {
+  max-width: 80px; /* Reducido el tamaño del logo para móviles */
+  top: 12px; /* Ajustado el posicionamiento del logo */
+  left: 12px; /* Ajustado el posicionamiento del logo */
+  z-index: 9999;
+  padding-left: 2%;
+  margin-top: 2%;
+}
+.menu-toggle{
+    margin-top: 5.25%;
+    padding-top: 10%;
+    padding-right: 8%;
+}
+
+#centerImage {
+    margin-left: -4%;
+  }
+  .centerIMA{
+    width: auto;
+    
+    margin-bottom: -70%;
+  }
+  
+
+  #fleImage {
+    width: 50%; /* Aumentado el tamaño del ícono */
+    position: fixed; /* Añadido posicionamiento fijo */
+    top: 50%; /* Posicionamiento en el centro vertical */
+    margin-left: -5%;
+  }
+
+
+    #min_img {
+        width: 500vh; /* Aumentando el ancho */
+        margin-top: 10%; /* Ajustando el margen superior */
+        margin-left: -3%; /* Ajustando el margen izquierdo */
+      }
+
+
+#section3 {
+  background-color: #000000;
+  display: flex;
+  flex-direction: column; /* Cambiado a columna para una mejor disposición en móviles */
+  align-items: center;
+}
+
+.box {
+  width: 90%; /* Ajustado el ancho de las cajas para móviles */
+  height: auto; /* Cambiado a auto para adaptarse al contenido */
+  margin-bottom: 20px; /* Aumentado el espacio entre las cajas */
+}
+
+.box img {
+  max-width: 80%; /* Aumentado el tamaño máximo de las imágenes */
+  max-height: 50%; /* Ajustado el tamaño máximo de las imágenes */
+  margin-bottom: 10px; /* Reducido el espacio entre las imágenes */
+}
+}

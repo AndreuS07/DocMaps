@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocMaps</title>
+    <link rel="stylesheet" href="" ossorigin="anonymous">
+    <link rel="icon" href="img/corsin.png" alt="img/icon">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/sec1.css">
+    <link rel="stylesheet" href="css/sec2.css">
+    <link rel="stylesheet" href="css/sec3.css">
+    <link rel="stylesheet" href="css/sec4.css">
+    <link rel="stylesheet" href="css mobile/firstm.css">
+    <link rel="stylesheet" href="css mobile/sec2m.css">
+    <link rel="stylesheet" href="css mobile/sec3m.css">
+    <link rel="stylesheet" href="css mobile/sec4m.css">
+    
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        background-color: #000000;
+      }
+
+      .container {
+        width: 100%;
+        height: 400vh;
+        overflow: hidden;
+      }
+
+      .page {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3em;
+        position: relative;
+      }
+
+      #section1 {
+        background-color: #000000;
+        position: relative;
+      }
+
+      #logo {
+        position: absolute;
+        top: 20px;
+        left: 15px;
+        max-width: 80px;
+        /* Tamaño mediano del logotipo */
+        z-index: 9999;
+        /* Aseguramos que esté encima de otros elementos */
+      }
+
+      #centerImage {
+        position: absolute;
+        top: 56%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 60%;
+        max-height: 65%;
+      }
+      @media screen and (max-width: 768px) {
+        #centerImage{
+    width: 79%; /* Reduciendo el ancho al 50% */
+    height: auto;
+    max-width: none; /* Eliminando el ancho máximo */
+    margin-top: 2%; /* Ajustando el margen superior */
+    margin-left: -2.8%; /* Ajustando el margen izquierdo */
+  }
+}
+
+      #fleImage {
+        position: absolute;
+        top: 93%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 2.5%;
+      }
+      @media screen and (max-width: 768px) {
+        #fleImage{
+    width: 14%; /* Reduciendo el ancho al 50% */
+    height: auto;
+    max-width: none; /* Eliminando el ancho máximo */
+    margin-top: -3%; /* Ajustando el margen superior */
+    margin-left: -4.5%; /* Ajustando el margen izquierdo */
+  }
+}
+
+      #min_img {
+        position: absolute;
+        top: 13.5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 30%;
+        max-height: 30%;
+      }
+
+      @media screen and (max-width: 768px) {
+        #min_img{
+    width: 64%; /* Reduciendo el ancho al 50% */
+    height: auto;
+    max-width: none; /* Eliminando el ancho máximo */
+    margin-top: 12%; /* Ajustando el margen superior */
+    margin-left: -2.7%; /* Ajustando el margen izquierdo */
+    margin-bottom: 40%;
+  }
+}
+      #section3 {
+        background-color: #000000;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .box-container {
+        display: flex;
+        flex-direction: column;
+        /* Cambia la dirección del contenedor a columna */
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        /* Añade un margen de 10px arriba y abajo */
+      }
+
+      .box {
+        width: 600px;
+        height: 310px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        /* Alinea el contenido de la caja en columna */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 15px;
+        /* Añade espacio entre las cajas */
+        font-size: 3ch;
+      }
+
+      .box:last-child {
+        margin-bottom: 0;
+        /* Elimina el espacio inferior para la última caja */
+      }
+
+      .box img {
+        max-width: 50%;
+        max-height: 80%;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!--Seccion 1-->
+      <section class="page" id="section1">
+        <img id="logo" src="img/sinf.png" alt="Logo">
+        <button class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="menu-items" id="menuItems">
+          <br>
+          <br>
+          <li>
+            <a href="ajustes.html" class="menu-item">
+              <img src="img/icon/aju.png" alt="Ajustes"> Ajustes</a>
+          </li>
+          <li>
+            <a href="perfil.html" class="menu-item">
+              <img src="img/icon/usu.png" alt="Perfil">Perfil</a>
+          </li>
+          <li>
+            <a href="calendar.html" class="menu-item">
+              <img src="img/icon/cal.png" alt="Calendario">Calendario</a>
+          </li>
+          <li>
+            <a href="escaner.html" class="menu-item">
+              <img src="img/icon/esc.png" alt="Escaner" style="height: 32px; width: 32px; margin-left: -4.5px;">Escaneo</a>
+          </li>
+          <li>
+            <a href="first.html#section4" class="menu-item">
+              <img src="img/icon/map.png" alt="Usuario">Mapa</a>
+          </li>
+          <li>
+            <a href="/" class="menu-item">
+              <img src="img/icon/apa.png" alt="Creador">Cerrar Sesión</a>
+          </li>
+        </ul>
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const menuItems = document.querySelector(".menu-items");
+            
+            menuToggle.addEventListener("mouseover", function() {
+              menuItems.style.display = "block";
+              menuItems.style.transform = "translateX(0%)";
+            });
+        
+            menuItems.addEventListener("mouseleave", function() {
+              menuItems.style.display = "none";
+              menuItems.style.transform = "translateX(100%)";
+            });
+        
+            document.addEventListener("click", function(event) {
+
+              if (!menuItems.contains(event.target) && !menuToggle.contains(event.target)) {
+                menuItems.style.display = "none";
+                menuItems.style.transform = "translateX(100%)";
+              }
+            });
+          });
+        </script>
+        <img id="min_img" src="img/min.png" alt="Imagen de arriba" />
+        <img id="centerImage" class="centerIMA" src="img/port.png" alt="Imagen en el centro" />
+        <img id="fleImage" src="img/fle.png" alt="Imagen en el centro" />
+      </section>
+
+      <!--Seccion 2-->
+      <section class="page" id="section2">
+        <div class="container2">
+          <div class="definition2">
+            <img class="corse" src="img/corsin.png" alt="Ejemplo">
+            <div class="definition-content">
+              <h2 class="definition-title">DocMaps</h2>
+              <p class="definition-description"> DocMaps te ofrece acceso rápido y personalizado a servicios médicos, asegurando tu bienestar y ofreciendo opciones adaptadas a tus necesidades específicas. Confía en DocMaps, para acceder a la mejor atención médica cuando más lo necesitas. </p>
+            </div>
+          </div>
+        </div>
+        <style>
+          .toti {
+  margin-top: 20.5%;
+  margin-left: 4%;
+}
+
+@media screen and (max-width: 768px) {
+  .toti {
+  margin-top: -16.5%;
+  margin-left: 4%;
+  
+}
+}
+
+.hero-cover {
+  position: absolute;
+  height: 23ch;
+  margin-left: -20.2%;
+  margin-top: -22%;
+  margin-bottom: 7%;
+  z-index: 1; /* Asegura que hero-cover esté en un índice Z más alto */
+}
+@media screen and (max-width: 768px) {
+  .hero-cover{
+    width: 63%; /* Reduciendo el ancho al 50% */
+    height: auto;
+    max-width: none; /* Eliminando el ancho máximo */
+    margin-top: 15%; /* Ajustando el margen superior */
+    margin-left: 13.5%; /* Ajustando el margen izquierdo */
+  }
+}
+
+#ved {
+  position: relative;
+  height: 520px;
+  margin-left: -120%;
+  margin-top: -135%;
+  z-index: 0; /* Coloca #ved detrás de hero-cover */
+}
+@media screen and (max-width: 768px) {
+  
+  #ved{
+    height: 12%;
+    margin-bottom: -162%;
+    margin-left: -18.7%;
+    max-width: 75%;
+  }
+  
+  .mobile_hero-video{
+    height: -10%;
+margin-left: 35.5%;
+
+  }
+}
+
+          </style>
+          <div class="toti">
+            <div class="panta">
+          <img src="img/movil2.png" loading="lazy" alt="" class="hero-cover"></div>
+          <div class="vif">
+          <div class="mobile_hero-video">
+              <video id="ved" autoplay="" loop="" style="background-image:url(&quot;https://assets-global.website-files.com/6050a76fa6a633d5d54ae714/656e2e0d8c1f48c5f2cc86bd_mobile_maps__hero_section_(loop) (Original)_VP9-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://assets-global.website-files.com/6050a76fa6a633d5d54ae714/656e2e0d8c1f48c5f2cc86bd_mobile_maps__hero_section_(loop) (Original)_VP9-transcode.mp4" data-wf-ignore="true">
+              <source src="https://assets-global.website-files.com/6050a76fa6a633d5d54ae714/656e2e0d8c1f48c5f2cc86bd_mobile_maps__hero_section_(loop) (Original)_VP9-transcode.webm" data-wf-ignore="true">
+            </video>
+          </div></div></div>
+          
+
+
+
+
+
+
+
+
+      </section>
+
+      <!--Seccion 3-->
+      <section class="page" id="section3">
+        <div class="container3">
+          <div class="box1">
+            <a href="sobrenosotros.html">
+            <img src="img/corsin.png" alt="tercor"></a>
+            <p class="titu">SOBRE NOSOTROS</p>
+          </div>
+          <div class="box2">
+            <p class="titu">PERIÓDICOS</p>
+            <a href="periodico.html">
+              <img src="img cuadr/Periodicos/per.png" alt="Imagen 2">
+            </a>
+          </div>
+          <div class="box3">   
+            <a href="cafeteria.html">
+              <img src="img cuadr/Comida/1.png" alt="Imagen 3"  style="margin-top: 3%">
+            </a>
+            <p class="titu" style="margin-bottom: -3%; padding-bottom: 4.5%;">CAFETERíA</p>
+          </div>
+          <div class="box4">
+            <a href="juegos.html">
+              <img src="img cuadr/Juegos/jue.png" alt="Imagen 4" style="margin-top: 3%;">
+            </a>
+            <p class="titu" style="margin-bottom: -3%; padding-bottom: 4.5%;">JUEGOS</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seccion 4 -->
+      <section class="page" id="section4">
+        <div class="container4">
+            <h1>HOSPITALES</h1>
+            <div class="maps">
+                <div class="map">
+                    <iframe class="mapint" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.0787664684767!2d-0.04881444422787821!3d39.984345074770985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5ffe28be0273c5%3A0x48b86319215b44e9!2sHospital%20Provincial%20de%20Castell%C3%B3n!5e0!3m2!1ses!2ses!4v1713956156768!5m2!1ses!2ses" width="430" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <p class="tc">Hospital Provincial Castellón</p>
+                </div>
+                <div class="map">
+                    <iframe class="mapint2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1285.1040194396987!2d-0.037531880687493156!3d39.99706132384208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5fffcb44cc3b35%3A0x4b2fc92bfd31d7c!2sHospital%20Vithas%20Castell%C3%B3n!5e0!3m2!1ses!2ses!4v1713965108699!5m2!1ses!2ses" width="430" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <p class="tc1">Hospital Vithas Castellón</p>
+                </div>
+                <div class="map">
+                    <iframe class="mapint3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1528.1283521657695!2d-0.042979093541435184!3d40.00271321232787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5ffe35baaea0b3%3A0x408879cd32368560!2sHospital%20General%20Universitario%20de%20Castell%C3%B3n!5e0!3m2!1ses!2ses!4v1713965341502!5m2!1ses!2ses" width="430" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <p class="tc2">Hospital General Castellón</p>
+                </div>
+                
+            </div>
+            <div class="futer" style="text-align: center;">
+              <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+                  <div style="width: 15%;"></div>
+                  <div class="fot1">
+                    <div class="ordena">
+                      <p class="letrtit">Legal</p>
+                      <ul class="list1">
+                          <li><a class="letr" href="ajustes.html">Aviso Legal</a></li>
+                          <li><a class="letr" href="ajustes.html">Política de Privacidad</a></li>
+                          <li><a class="letr" href="ajustes.html">Política de Cookies</a></li>
+                          <li><a class="letr" href="ajustes.html">Licencias</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="fot2">
+                    <div class="ordena">
+                      <p class="letrtit">Productos</p>
+                      <ul class="list2">
+                          <li><a class="letr" href="calendar.html">Calendario</a></li>
+                          <li><a class="letr" href="periodico.html">Periódicos</a></li>
+                          <li><a class="letr" href="cafeteria.html">Cafetería</a></li>
+                          <li><a class="letr" href="juegos.html">Juegos</a></li>
+                      </ul></div>
+                  </div>
+                  <div class="fot3">
+                    <div class="ordena">
+                    <p class="letrtit">DocMaps</p>
+                    <ul class="list3">
+                        <li><a class="letr" href="first.html#section2">Que somos?</li>
+                        <li><a class="letr" href="sobrenosotros.html">Que brindamos?</a></li>
+                    </ul></div>
+                </div>
+                  <div class="fot4">
+                      <p class="letrtit">DocMaps</p>
+                      <ul class="list4">
+                          <li><a href="first.html#section1"><img src="img/corsin.png" style="width: 55%; margin-top: -15%; margin-left: 15%;"></a></li>
+                      </ul>
+                  </div>
+                  <div style="width: 15%;">
+                  
+                    <div class="iconosred">
+                      <!-- Iconos en orden horizontal -->
+                      <a href="https://discord.com/"><img src="img/red1.png" class="icored" alt="red1"></a>
+                      <a href="https://www.instagram.com/docmaps/"><img src="img/red2.png" class="icored" alt="red2"></a>
+                      <a href="https://twitter.com/"><img src="img/red3.png" class="icored" alt="red3"></a>
+                      <a href="https://github.com/"><img src="img/red4.png" class="icored" alt="red4"></a>
+                      <a href="https://www.twitch.tv/"><img src="img/red5.png" class="icored" alt="red5"></a>
+                      <a href="https://www.facebook.com/"><img src="img/red6.png" class="icored" alt="red6"></a>
+                    
+                    </div>
+                  
+
+              </div>
+          </div>
+          </div>
+        </div>
+        </div>
+    </section>
+  
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          let currentPage = 1;
+          const totalPages = 4;
+          let isScrolling = false;
+          window.addEventListener('wheel', function(event) {
+            if (!isScrolling) {
+              isScrolling = true;
+              if (event.deltaY > 0 && currentPage < totalPages) {
+                currentPage++;
+              } else if (event.deltaY < 0 && currentPage > 1) {
+                currentPage--;
+              }
+              scrollToPage(currentPage);
+            }
+          });
+
+          function scrollToPage(page) {
+            const offset = (page - 1) * window.innerHeight;
+            const scrollDuration = 800;
+            const startingY = window.pageYOffset;
+            const diff = offset - startingY;
+            let start;
+            window.requestAnimationFrame(function step(timestamp) {
+              if (!start) start = timestamp;
+              const time = timestamp - start;
+              const percent = Math.min(time / scrollDuration, 1);
+              window.scrollTo(0, startingY + diff * easeInOutQuad(percent));
+              if (time < scrollDuration) {
+                window.requestAnimationFrame(step);
+              } else {
+                currentPage = page;
+                isScrolling = false;
+              }
+            });
+          }
+
+          function easeInOutQuad(t) {
+            return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+          }
+        });
+      </script>
+  </body>
+</html>

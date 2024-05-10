@@ -1,0 +1,70 @@
+#section2{
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    
+    background: linear-gradient(to bottom, black, #111111);
+}
+
+.container2 {
+    max-width: 800px;
+    margin: 45px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.752);
+}
+
+.definition2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.definition2 img {
+    width: 445px;
+    height: auto;
+    margin-right: 10px;
+    margin-left: -5.2%;
+    animation: pulse 1s infinite alternate; /* La animación de pulsación */
+
+}
+
+.definition-content {
+    flex: 1;
+    margin-left: -6%;
+}
+
+.definition-title {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 66px;
+    font-weight: bolder;
+    margin-bottom: 22px;
+    margin-top: 12px;
+    /* Aquí puedes añadir animaciones futuras */
+}
+
+.definition-description {
+    font-size: 17px;
+    font-weight: bold;
+    color: #808080;
+    margin-right: 24%;
+    margin-left: -3%;
+
+}
+
+.corse{
+  width: 2%;
+}
+  
+  @keyframes pulse {
+    from {
+      transform: scale(0.65); /* Escala normal */
+    }
+    to {
+      transform: scale(0.75); /* Escala un poco más grande */
+    }
+  }
+  

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil</title>
+    <link rel="icon" href="img/corsin.png" alt="img/icon">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&display=swap" rel="stylesheet">
+    
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
+    <style>
+     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+body{
+    background-image: url(img/fond.png);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Clash Display', sans-serif;
+}
+section {
+    position: relative;
+    min-height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    perspective: 1000px;
+}
+section::before {
+    content: "";
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    transform: translate(-150px, -100px);
+    background: linear-gradient(90deg, #311B92, #f3f5f5);
+}
+section::after {
+    content: "";
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    transform: translate(150px, 100px);
+    background: linear-gradient(90deg, #311B92, #f3f5f5);
+}
+.container {
+    position: relative;
+    height: 815px;
+    width: 765px;
+    z-index: 100;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    margin-top: 4%;
+}
+.container .card {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 25px;
+    border-radius: 25px;
+    backdrop-filter: blur(25px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backface-visibility: hidden;
+}
+.front-face header,
+.front-face .logo {
+    display: flex;
+    align-items: center;
+}
+.front-face header {
+    justify-content: space-between;
+}
+.front-face .logo img {
+    width: 48px;
+    margin-right: 10px;
+}
+h5 {
+    font-size: 16px;
+    font-weight: 400;
+}
+.front-face .chip {
+    width: 50px;
+}
+.front-face .card-details {
+    display: flex;
+    margin-top: 40px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: larger;
+  }
+.uno{
+    font-size: 1.7ch;
+    font-family: 'Clash Display', sans-serif;
+    margin-top: 4%;
+}
+.un{
+    font-size: 1.7ch;
+    font-family: 'Clash Display', sans-serif;
+}
+.do{
+    font-size: 2.2ch;
+    font-family: 'Clash Display', sans-serif;
+}
+.mini{
+    position: absolute;
+    margin-top: -16.3%;
+    margin-left: -2.4%;
+    margin-bottom: 2%;
+}
+.fotperf{
+    margin-bottom: 23%;
+    margin-left: 4%;
+
+}
+.name{
+    margin-left: 23%;
+}
+h3{
+border: 4px solid rgb(255, 255, 255);
+  padding: 5px;
+  margin-bottom: 4px;
+  border-radius: 15px;
+
+}
+.pi {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+body{
+    background-image: url(img/fond.png);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Clash Display', sans-serif;
+}
+section {
+    position: relative;
+    min-height: 80vh;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    perspective: 1000px;
+}
+section::before {
+    content: "";
+    position: absolute;
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    transform: translate(-150px, -100px);
+    background: linear-gradient(90deg, #311B92, #f3f5f5);
+}
+section::after {
+    content: "";
+    position: absolute;
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    transform: translate(150px, 100px);
+    background: linear-gradient(90deg, #311B92, #f3f5f5);
+}
+header{
+  margin-left: 10%;
+  margin-top: -2%;
+}
+.container {
+    position: relative;
+    height: 1025px;
+    width: 765px;
+    z-index: 100;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    margin-top: 4%;
+}
+.container .card {
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    padding: 25px;
+    border-radius: 25px;
+    backdrop-filter: blur(25px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backface-visibility: hidden;
+    margin-top: 20%;
+    margin-left: 11%;
+}
+.front-face header,
+.front-face .logo {
+    display: flex;
+    align-items: center;
+}
+.front-face header {
+    justify-content: space-between;
+}
+.front-face .logo img {
+    width: 48px;
+    margin-right: 10px;
+}
+h5 {
+    font-size: 14px;
+    font-weight: 400;
+}
+.front-face .chip {
+    width: 50px;
+}
+.front-face .card-details {
+    display: flex;
+    margin-top: 40px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: larger;
+  }
+.uno{
+    font-size: 1.4ch;
+    font-family: 'Clash Display', sans-serif;
+    margin-top: 6%;
+}
+.un{
+    font-size: 1.7ch;
+    font-family: 'Clash Display', sans-serif;
+}
+.do{
+    font-size: 2.2ch;
+    font-family: 'Clash Display', sans-serif;
+}
+.mini{
+    position: absolute;
+    margin-top: -16.3%;
+    margin-left: -2.4%;
+    margin-bottom: 2%;
+    visibility:hidden;
+}
+.fotperf{
+    margin-bottom: 23%;
+    margin-left: 4%;
+
+}
+.name{
+    margin-left: 23%;
+}
+h3{
+border: 4px solid rgb(255, 255, 255);
+  padding: 5px;
+  margin-bottom: 4px;
+  border-radius: 15px;
+  
+
+}
+.pi {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: small;
+    font-weight: 100;
+    margin-bottom: -100;
+    
+}
+#accordion{
+  margin-top: -9%;
+}
+}
+</style>
+</head>
+<body>
+    <section>
+      <a href="first.html" class="button">Atrás</a>
+        
+      <div class="container">
+        <div class="card front-face">
+          <header>
+        
+              <p style="margin-bottom: 2.5%; margin-top: 3%; margin-left: 14%; font-size: 2.7ch;">AJUSTES</p>
+            
+          </header>
+          <div class="card-details">
+            <div class="name-number" style="margin-left: 2%; margin-right: 2%;">
+                <img class="mini" src="img/ajus.png" style="width: 100px;"/>
+                <div id="accordion">
+                    <h3>Configuración</h3>
+                  <div>
+                    <p class="pi"><br>
+                    Titular de la Cuenta: Fernando Williams Smith<br><br>
+                    Contraseña: xxxxxxxxxxxx <br><br>
+                    Fecha de alta: 27/08/2024<br><br>
+                    Idioma: Español<br><br>
+                    Notificaciones: No<br><br>
+                    Modo Oscuro: Predeterminado<br><br>
+                    Ultima vez conectado: hoy a las 17:25<br><br>
+                    Notificaciones por correo electrónico: Usted esta inscrito a las notificaciones por correo electrónico de DocMaps
+                    </p>
+                  </div>
+                  <h3>Aviso Legal</h3>
+                  <div>
+                    <p class="pi"><br>
+                    Uso del Sitio: La información proporcionada en DocMaps es únicamente con fines informativos y no constituye asesoramiento médico. No garantizamos la precisión o integridad de la información.<br><br>
+                    Propiedad Intelectual: Todos los derechos de propiedad intelectual sobre el contenido del Sitio son propiedad de DocMaps o de sus licenciantes.<br><br>
+                    Limitación de Responsabilidad: DocMaps no será responsable de ningún daño derivado del uso del Sitio. Los usuarios utilizan el Sitio bajo su propio riesgo.<br><br><br>
+                    </p><br><br>
+                  </div>
+                  <h3>Política de Privacidad</h3>
+                  <div>
+                    <p class="pi"><br>
+                    Información Recopilada: Recolectamos información personal para mejorar su experiencia en nuestro sitio y brindarle nuestros servicios. Esta información incluye su nombre, correo electrónico y preferencias de búsqueda.<br><br>
+                    Uso de la Información: Utilizamos sus datos para personalizar su experiencia, mejorar nuestro sitio y comunicarnos con usted. No compartimos su información con terceros sin su consentimiento, excepto cuando sea necesario para proporcionar nuestros servicios.<br><br>
+                    Seguridad y Privacidad: Protegemos sus datos mediante medidas de seguridad y no compartimos su información personal con terceros sin su consentimiento.<br><br><br>
+                    </p>
+                  </div>
+                  <h3>Política de Cookies</h3>
+                  <div>
+                    <p class="pi"><br>
+                    Uso de Cookies: Utilizamos cookies y tecnologías similares para mejorar su experiencia en nuestro sitio web y comprender cómo lo utiliza. Las cookies son pequeños archivos de datos que se almacenan en su dispositivo cuando visita nuestro sitio.<br><br>
+                    Tipos de Cookies: Utilizamos cookies esenciales para el funcionamiento del sitio, cookies de rendimiento para analizar cómo los usuarios interactúan con el sitio y cookies de publicidad para personalizar la publicidad que ve en línea.<br><br>
+                    Control de Cookies: Puede controlar y administrar las cookies a través de la configuración de su navegador. Sin embargo, deshabilitar ciertas cookies puede afectar la funcionalidad de nuestro sitio.<br><br>
+                    Consentimiento: Al continuar utilizando nuestro sitio, usted acepta el uso de cookies de acuerdo con esta política.<br><br><br><br><br><br><br>
+                    </p>
+                  </div>
+                  <h3>Licencias</h3>
+                  <div>
+                    <br>
+                    <p>
+                        <p class="pi" xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="https://creativecommons.org/licenses/by-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution-NoDerivatives 4.0 International <img style="height:30px!important;margin-left:10px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:30px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:30px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt=""></a></p>                    </p>
+                  </div>
+                </div></p><br>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

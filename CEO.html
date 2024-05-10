@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flipping Card UI Design</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&display=swap" rel="stylesheet">
+
+    <style>
+        
+     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+body{
+  background-image: url(img/fond.png);
+  
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Clash Display', sans-serif;
+}
+section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  perspective: 1000px;
+}
+section::before {
+  content: "";
+  position: absolute;
+  height: 240px;
+  width: 240px;
+  border-radius: 50%;
+  transform: translate(-150px, -100px);
+  background: linear-gradient(90deg, #311B92, #f3f5f5);
+}
+section::after {
+  content: "";
+  position: absolute;
+  height: 240px;
+  width: 240px;
+  border-radius: 50%;
+  transform: translate(150px, 100px);
+  background: linear-gradient(90deg, #311B92, #f3f5f5);
+}
+.container {
+  position: relative;
+  height: 365px;
+  width: 575px;
+  z-index: 100;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+}
+
+.container .card {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 25px;
+  border-radius: 25px;
+  backdrop-filter: blur(25px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backface-visibility: hidden;
+}
+.front-face header,
+.front-face .logo {
+  display: flex;
+  align-items: center;
+}
+.front-face header {
+  justify-content: space-between;
+}
+.front-face .logo img {
+  width: 48px;
+  margin-right: 10px;
+}
+h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+.front-face .chip {
+  width: 50px;
+}
+.front-face .card-details {
+  display: flex;
+  margin-top: 40px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 10px 20px;
+      background-color: #fff;
+      color: #333;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none; /* Añadimos esta línea para eliminar la subrayado del enlace */
+      cursor: pointer;
+  }
+
+    </style>
+  </head>
+  <body>
+
+<a href="first.html" class="button">Atrás</a>
+
+    <section>
+      <div class="container">
+        <div class="card front-face">
+          <header>
+            <span class="logo">
+              <h2>CREADOR</h2>
+            </span>
+          </header>
+          <div class="card-details">
+            <div class="name-number">
+              <h5>NOMBRE</h5>
+              <h3 class="number">ANDREU VICENT FAUBEL SOLIGÓ</h3><br><br>
+              <img src="img/corsin.png" style="width: 100px;">
+              <br><br><br>
+              <h5 class="name">Creador de DocMaps en Septiembre del año 2024</h5>
+            </div>
+            <div class="valid-date">
+              <h6>AVFS</h6>
+              <h5>001</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

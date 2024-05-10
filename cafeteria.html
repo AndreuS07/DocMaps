@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="cafes/ca1.png">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&display=swap" rel="stylesheet">
+
+    <title>DocMaps Cafetería</title>
+    <style>
+        body {
+            font-family: 'Clash Display', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            transition: background-color 0.3s ease;
+            position: relative;
+        }
+
+        header {
+            background-color: #e6d7ba;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            position: relative; 
+        }
+
+        .cafr {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            height: 25vh;
+            width: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Estilos específicos para el menú */
+        #menu-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .menu-item {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-item img {
+            max-width: 150px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .menu-item h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .menu-item p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 27%;
+        }
+
+        .menu-item h4 {
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2.4ch;
+        }
+
+        .menu-item button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .menu-item button:hover {
+            background-color: #555;
+            transform: scale(1.1);
+        }
+
+        /* Estilos para el botón de salida */
+        .exit-button {
+            position: absolute;
+            top: 10px; /* Ajusta la distancia desde la parte superior */
+            left: 10px; /* Ajusta la distancia desde la izquierda */
+            background-color: #333;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none; /* Quitamos el subrayado del enlace */
+            transition: background-color 0.3s ease;
+        }
+
+        .exit-button:hover {
+            background-color: #555;
+        }
+
+        .centr{
+margin-left: 27.5%;        
+}
+@media screen and (max-width: 768px) {
+    body {
+            font-family: 'Clash Display', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            transition: background-color 0.3s ease;
+            position: relative;
+        }
+
+        header {
+            background-color: #e6d7ba;
+            color: #fff;
+            padding: 0px;
+            text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            position: relative; 
+            
+        }
+
+        .cafr {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 13.3vh;
+            width: auto;
+            margin-left: -39.6%;
+            margin-right: -180%;
+            position: relative; 
+
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Estilos específicos para el menú */
+        #menu-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .menu-item {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-item img {
+            max-width: 150px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .menu-item h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .menu-item p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 27%;
+        }
+
+        .menu-item h4 {
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2.4ch;
+        }
+
+        .menu-item button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .menu-item button:hover {
+            background-color: #555;
+            transform: scale(1.1);
+        }
+
+        /* Estilos para el botón de salida */
+        .exit-button {
+            position: absolute;
+            top: 10px; /* Ajusta la distancia desde la parte superior */
+            left: 10px; /* Ajusta la distancia desde la izquierda */
+            background-color: #333;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none; /* Quitamos el subrayado del enlace */
+            transition: background-color 0.3s ease;
+        }
+
+        .exit-button:hover {
+            background-color: #555;
+        }
+
+        .centr{
+margin-left: 27.5%;   
+}
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="centr">
+        <img class="cafr" src="img/caf.png"/></div>
+        <!-- Agregamos el botón de salida -->
+        <a class="exit-button" href="first.html#section3">Salir</a>
+    </header>
+    <section id="menu">
+        <h2>Menú</h2>
+        <ul id="menu-list">
+            <!-- Aquí se mostrará el menú dinámicamente con JavaScript -->
+        </ul>
+    </section>
+
+    <script>
+        const menuItems = [
+            { id: 1, name: "Café Americano", price: 2.00, description: "Café americano suave y reconfortante.", image: "cafes/1.jpg" },
+            { id: 2, name: "Café Latte", price: 3.50, description: "Delicioso café latte con espuma de leche.", image: "cafes/2.jpg" },
+            { id: 3, name: "Expresso", price: 3.00, description: "Taza de café expresso caliente o templado.", image: "cafes/3.jpg" },
+            { id: 4, name: "Frappé de Vainilla", price: 4.50, description: "Frappé de vainilla con crema batida y caramelo.", image: "cafes/4.jpeg" },
+            { id: 5, name: "Mocha", price: 4.00, description: "Mocha de café, chocolate y leche.", image: "cafes/5.jpg" },
+            { id: 6, name: "Té Chai Latte", price: 3.50, description: "Té chai latte con especias y leche templada.", image: "cafes/6.jpg" },
+            { id: 7, name: "Té Verde", price: 2.50, description: "Té verde orgánico con sabor a camellia sinensis.", image: "cafes/7.jpg" },
+            { id: 8, name: "Refresco", price: 2.50, description: "Coca Cola, Fanta de limón o naranja, Aquarius.", image: "cafes/8.png" },
+            { id: 9, name: "Brownie", price: 2.00, description: "Brownie de chocolate casero con nueces.", image: "cafes/9.jpg" },
+            { id: 10, name: "Tarta de Manzana", price: 3.00, description: "Tarta de manzana casera con masa quebrada.", image: "cafes/10.jpg" },
+            { id: 11, name: "Croissant de mantequilla", price: 2.50, description: "Croissant de mantequilla recién horneado.", image: "cafes/11.jpg" },
+            { id: 12, name: "Muffin de Arándanos", price: 2.50, description: "Muffin de arándanos esponjoso y delicioso.", image: "cafes/12.jpg" },
+            { id: 13, name: "Bagel de Queso Crema", price: 3.50, description: "Bagel con auténtico queso crema y semillas.", image: "cafes/13.jpg" },
+            { id: 14, name: "Croissant de Chocolate", price: 3.00, description: "Croissant relleno de delicioso chocolate.", image: "cafes/14.jpg" },
+            { id: 15, name: "Pastel de Fresas con nata", price: 3.50, description: "Pastel de fresas con nata casera delicioso.", image: "cafes/15.png" }
+        ];
+
+        const menuList = document.getElementById("menu-list");
+
+        function displayMenu() {
+            menuItems.forEach(item => {
+                const menuItem = document.createElement("li");
+                menuItem.classList.add("menu-item");
+                const image = document.createElement("img");
+                image.src = item.image;
+                image.alt = item.name;
+                menuItem.appendChild(image);
+                const itemName = document.createElement("h3");
+                itemName.textContent = item.name;
+                menuItem.appendChild(itemName);
+                const itemDesc = document.createElement("p");
+                itemDesc.textContent = item.description;
+                menuItem.appendChild(itemDesc);
+                const itemPrice = document.createElement("h4");
+                itemPrice.textContent = `$${item.price.toFixed(2)}`;
+                menuItem.appendChild(itemPrice);
+                menuList.appendChild(menuItem);
+            });
+        }
+
+        displayMenu();
+    </script>
+</body>
+</html>

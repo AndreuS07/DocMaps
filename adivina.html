@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adivina el Número</title>
+<style>
+    html{
+        background-image: url(img-G/adi.png);
+    }
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  #gameBox {
+    width: 480px;
+    height: 640px; 
+    margin: auto;
+    margin-top: 6%;
+    padding: 15px;
+    border: 3px solid #a7a7a7;
+    border-radius: 20px;
+    background-color: #f3f3f3e1;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.144);
+  }
+  h1 {
+    font-size: 44px; 
+    margin-bottom: 20px; 
+    color: #252525;
+  }
+  p {
+    font-size: 24px; 
+    margin-bottom: 20px; 
+    color: #2c2c2c;
+  }
+  #guessField {
+    width: 66px;
+    height: 45px; 
+    font-size: 30px; 
+    margin-bottom: 15px; 
+    padding: 3px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+  }
+  .button {
+    padding: 12px 18px;
+    font-size: 22px;
+    cursor: pointer;
+    background-color: #58c45c;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    transition: background-color 0.3s ease;
+  }
+  .button:hover {
+    background-color: #45a049;
+  }
+  #output {
+    font-size: 17px; 
+    margin-top: 35px;
+    color: #000000;
+  }
+
+  @media screen and (max-width: 768px) {
+    html{
+        background-image: url(img-G/adi.png);
+    }
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  #gameBox {
+    width: 340px;
+    height: 560px; 
+    margin: auto;
+    margin-top: 6%;
+    padding: 15px;
+    border: 3px solid #a7a7a7;
+    border-radius: 20px;
+    background-color: #f3f3f3e1;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.144);
+    margin-top: 35%;
+  }
+  h1 {
+    font-size: 44px; 
+    margin-bottom: 20px; 
+    color: #252525;
+  }
+  p {
+    font-size: 24px; 
+    margin-bottom: 20px; 
+    color: #2c2c2c;
+  }
+  #guessField {
+    width: 66px;
+    height: 45px; 
+    font-size: 30px; 
+    margin-bottom: 15px; 
+    padding: 3px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+  }
+  .button {
+    padding: 12px 18px;
+    font-size: 22px;
+    cursor: pointer;
+    background-color: #58c45c;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    transition: background-color 0.3s ease;
+  }
+  .button:hover {
+    background-color: #45a049;
+  }
+  #output {
+    font-size: 17px; 
+    margin-top: 35px;
+    color: #000000;
+  }
+  }
+
+
+</style>
+</head>
+<body>
+<div id="gameBox">
+  <h1>Adivina el Número</h1>
+  <p></p>
+  <p>¡Intenta adivinar el número entre 1 y 100!</p>
+  <br><br>
+  <p>Ingresa tu número:</p>
+  <input type="text" id="guessField" class="guessField" maxlength="2">
+  <br><br>
+  <button class="button" onclick="checkGuess()">Adivinar</button>
+  <button class="button" id="restartButton" style="display:none;" onclick="restartGame()">Reiniciar</button>
+  <button class="button" onclick="exitGame()">Salir</button>
+  <div id="output" class="output"></div>
+</div>
+
+<script>
+  
+  var randomNumber = Math.floor(Math.random() * 100) + 1;
+
+  var attempts = 0;
+
+  function checkGuess() {
+    var userGuess = document.getElementById("guessField").value;
+    var output = document.getElementById("output");
+    
+    if (userGuess === "") {
+      output.innerHTML = "Por favor, ingresa un número.";
+      return;
+    }
+
+    var guess = parseInt(userGuess);
+    attempts++;
+
+    if (guess === randomNumber) {
+      output.innerHTML = "¡Felicidades! ¡Adivinaste el número " + randomNumber + " en " + attempts + " intentos!";
+      document.getElementById("guessField").disabled = true;
+      document.getElementById("restartButton").style.display = "inline"; 
+    } else if (guess < randomNumber) {
+      output.innerHTML = "El número es mayor que " + guess + ". ¡Intenta de nuevo!";
+    } else {
+      output.innerHTML = "El número es menor que " + guess + ". ¡Intenta de nuevo!";
+    }
+  }
+
+  function exitGame() {
+      window.location.href = "juegos.html"; 
+  }
+  
+  function restartGame() {
+    window.location.reload(); 
+  }
+</script>
+</body>
+</html>

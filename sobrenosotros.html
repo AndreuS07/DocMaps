@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre nosotros</title>
+    <link rel="icon" href="img/corsin.png" alt="img/icon">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@700&display=swap" rel="stylesheet">
+    <style>
+      html,
+      body {
+        height: 99.5%;
+        background-color: black;
+        font-family: 'Clash Display', sans-serif;
+      }
+
+      .full-screen {
+        height: 99%;
+        display: flex;
+        flex-direction: column;
+        padding: 2px;
+      }
+
+      .row {
+        display: flex;
+        flex: 1;
+      }
+
+      .box1,
+      .box2,
+      .box3,
+      .box4,
+      .box5,
+      .box6 {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        margin: 5px;
+        flex: 1;
+      }
+
+      .box1 {
+        max-width: 617px;
+      }
+
+      .box2 {
+        max-width: 617px;
+      }
+
+      .box3 {
+        max-width: 495px;
+      }
+
+      .box4 {
+        max-width: 120px;
+      }
+
+      .mapap {
+        height: auto;
+        width: 30%;
+        padding-left: 5%;
+        margin-right: -2%;
+      }
+
+      .logp {
+        height: auto;
+        width: 32%;
+        margin-left: 5%;
+        margin-right: -2%;
+        border-radius: 30px;
+      }
+
+      .box4 {
+        background-color: black;
+      }
+
+      .atr {
+        padding: 14%;
+        margin-left: 0px;
+        font-family: 'Clash Display', sans-serif;
+        font-size: 2ch;
+        color: white;
+        font-weight: bolder;
+        text-decoration: none;
+        margin-left: 4.5%;
+      }
+
+      .volp {
+        width: 57%;
+        margin-top: 5%;
+        margin-bottom: -10%;
+        margin-left: 22.2%;
+      }
+
+      .newsp {
+        width: 30.2%;
+        height: auto;
+        border-radius: 20px;
+        margin-left: 6%;
+        margin-right: 6%;
+      }
+
+      .calendp {
+        width: 31%;
+        height: auto;
+        border-radius: 20px;
+        margin-left: 6%;
+        margin-right: 6%;
+      }
+
+      .cafep {
+        width: 34%;
+        height: auto;
+        border-radius: 20px;
+        margin-left: 6%;
+        margin-right: 6%;
+      }
+
+      .lt1{
+        font-size: 20px; 
+        padding: 0px 70px 0px 80px;
+      }
+      .lt2{
+        font-size: 20px; 
+        padding: 40px 70px 35px ;
+      }
+      .lt3{
+        font-size: 20px; 
+        padding: 0px 80px 0 20px;
+      }
+      .lt4{
+        font-size: 20px; 
+        padding: 0px 70px 0 20px;
+      }
+      .lt5{
+        font-size: 20px; 
+        margin-right: 6%;
+      }
+
+      @media screen and (max-width: 768px) {
+        html,
+      body {
+        
+        background-color: black;
+        font-family: 'Clash Display', sans-serif;
+      }
+
+      .full-screen {
+        
+        display: flex;
+        flex-direction: column;
+        padding: 2px;
+      }
+
+      .row {
+        display: flex;
+        flex: 1;
+      }
+
+      .box1,
+      .box2,
+      .box3,
+      .box4,
+      .box5,
+      .box6 {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        margin: 5px;
+        flex: 1;
+      }
+
+      .box1 {
+        max-width: 725px;
+        padding-right: 29%;
+      }
+
+      .box2 {
+        max-width: 455px;
+        padding-right: 20%;
+      }
+
+      .box3 {
+        max-width: 675px;
+        padding-right: -90%;
+        padding-left: 10%;
+      }
+
+      .box4 {
+        max-width: 100px;
+        padding-right: 20%;
+      }
+      .box6{
+        max-width: 480px;
+        padding-right: -20%;
+        height: 600px;
+      }
+      
+
+      .mapap {
+        position: absolute;
+        height: auto;
+        width: 50%;
+        padding-left: 5%;
+        margin-right: 5%;
+        margin-bottom: -70%;
+      }
+
+      .logp {
+        position: absolute;
+        height: auto;
+        width: 42%;
+        margin-left: -7%;
+        margin-right: -7%;
+        border-radius: 30px;
+        margin-top: 58%;
+        margin-bottom: -25%;
+      }
+
+      .box4 {
+        margin-top: -280%;
+        margin-left: -70%;
+        background-color: rgba(0, 0, 0, 0);
+        border-color: rgba(0, 0, 0, 0);
+        width: 50%;
+        
+        
+      }
+
+      .atr {
+        padding: 14%;
+        margin-left: 0px;
+        font-family: 'Clash Display', sans-serif;
+        font-size: 3.5ch;
+        color: white;
+        font-weight: bolder;
+        text-decoration: none;
+        margin-left: -250.5%;
+        margin-bottom: 20%;
+        margin-right: 150%;
+        
+      }
+
+      .volp {
+        width: 57%;
+        margin-top: 5%;
+        margin-bottom: -10%;
+        margin-left: 22.2%;
+      }
+
+      .newsp {
+        position: absolute;
+
+        width: 45.2%;
+        height: auto;
+        border-radius: 20px;
+        
+        margin-right: 6%;
+        margin-left: 32.5%;
+        margin-top: -50%;
+      }
+
+      .calendp {
+        position: absolute;
+        width: 42%;
+        height: auto;
+        border-radius: 20px;
+        margin-left: 6%;
+        margin-right: -13%;
+        margin-top: -53%;
+      }
+
+      .cafep {
+        position: absolute;
+
+        width: 45%;
+        height: auto;
+        border-radius: 20px;
+        margin-left: -86%;
+        margin-right: -6%;
+        margin-bottom: -30%;
+      }
+.lt1{
+  margin-left: -21%;
+  margin-right: -19%;
+  margin-top: -71.5%;
+}
+.lt2{
+  margin-left: -21%;
+  margin-right: -19%;
+  margin-top: -95%;
+}
+.lt3{
+  
+
+  margin-left: -5%;
+  margin-right: -76%;
+  margin-bottom: -105%;
+}
+.lt4{
+  margin-left: -5%;
+  margin-right: -70%;
+  margin-bottom: -117%; 
+}
+.lt5{
+  margin-left: -35%;
+  margin-right: -90%;
+  padding-left: 100%;
+  margin-bottom: 80%;
+  
+  
+}
+      .lt1, .lt2, .lt3, .lt4, .lt5{
+        font-size: 5px;
+      }
+      .lt1{
+        font-size: 20px; 
+        padding: 0px 70px 0px 80px;
+      }
+      .lt2{
+        font-size: 20px; 
+        padding: 40px 70px 35px ;
+      }
+      .lt3{
+        font-size: 20px; 
+        padding: 0px 80px 0 20px;
+      }
+      .lt4{
+        font-size: 20px; 
+        padding: 0px 70px 0 20px;
+      }
+      .lt5{
+        font-size: 20px; 
+        margin-right: 6%;
+        padding: 0px 250px 0 150px;
+      }
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <div class="full-screen">
+      <div class="row">
+        <div class="box5">
+          <img class="logp" src="img/inicifot.png" alt="Imagen en Caja 1">
+          <p class="lt1">
+            <b>DocMaps</b> es tu compañero confiable en el vasto paisaje de la atención médica. Desde diagnósticos hasta tratamientos, te proporcionamos acceso rápido y fácil a conocimientos actualizados, garantizando que puedas tomar decisiones informadas sobre tu salud y bienestar. Llegando siempre a la consulta de forma eficaz, rapida y sin distracciones.
+          </p>
+        </div>
+        <div class="box6">
+          <img class="mapap" src="img cuadr/Mapa/map.png" alt="Imagen en Caja 2">
+          <p class="lt2">
+            <b>DocMaps</b> revoluciona la manera en que encuentras información médica. Con una interfaz intuitiva y potentes algoritmos de búsqueda, te conectamos con los recursos más relevantes para tu consulta, sin distracciones ni información innecesaria.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="box1">
+          <img class="newsp" src="img/newspa.png" alt="Imagen en Caja 3">
+          <p class="lt3">
+            Ahora, puedes mantenerte al día sobre los últimos avances en salud y bienestar, explorando nuestras noticias y consejos exclusivos, diseñados para tu bienestar integral.
+          </p>
+        </div>
+        <div class="box2">
+          <img class="calendp" src="img/calendp.png" alt="Imagen en Caja 4">
+          <p class="lt4">
+            Simplifica tu vida anotando y eliminando citas entre pacientes y doctores de manera eficiente. Con nuestro calendario integrado, coordinar tus consultas nunca ha sido tan fácil y conveniente.
+          </p>
+        </div>
+        <div class="box3">
+          <img class="cafep" src="img/cafp.jpg" alt="Imagen en Caja 5">
+          <p class="lt5">
+            Ven y disfruta nuestros deliciosos cafés, tés y pasteles frescos que te ayudarán a recargar energías y satisfacer tus antojos.
+          </p>
+        </div>
+        <div class="box4">
+          <a class="atr" href="first.html#section3">ATRÁS <br>
+            <img class="volp" src="img/flec.png">
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

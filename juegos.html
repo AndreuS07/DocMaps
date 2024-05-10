@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@900&display=swap" rel="stylesheet">
+    <title>Menú de Juegos</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #202020;
+        font-family: "Lexend", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 900;
+        font-style: normal;
+      }
+
+      .container {
+        max-width: 1350px;
+        /* Ajustado el ancho máximo */
+        margin: 2% auto;
+        padding: 35px;
+        background-color: rgba(255, 255, 255, 0.884);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.493);
+      }
+
+      h1 {
+        text-align: center;
+        color: #ffffff;
+        font-size: 4.5ch;
+        margin-top: 3.5%;
+        margin-bottom: 3%;
+      }
+
+      .menu {
+        display: flex;
+        flex-direction: row;
+        /* Modificado para ordenar horizontalmente */
+        justify-content: space-between;
+        /* Distribuye los elementos horizontalmente */
+        align-items: center;
+        margin-top: -18px;
+        flex-wrap: wrap;
+        /* Envuelve los elementos en múltiples líneas si no caben en una sola */
+      }
+
+      .game-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.651);
+        padding: -5px;
+        border-radius: 10px;
+        margin-top: 20px;
+        box-shadow: 0 0 5px rgba(46, 46, 46, 0.493);
+        width: calc(33.33% - 23px);
+        /* Calcula el ancho de cada juego para que haya tres en una fila */
+      }
+
+      .game-box a {
+        display: block;
+        margin-bottom: 25px;
+        text-align: center;
+      }
+
+      .game-box img {
+        width: 230px;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+      }
+
+      .game-box img:hover {
+        transform: scale(1.085);
+      }
+
+      .back-button {
+        display: block;
+        padding: 12px 22px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        margin-top: 2.8%;
+        text-align: center;
+        margin-left: 38%;
+        margin-right: 38%;
+        margin-bottom: -0.5%;
+      }
+
+      .back-button:hover {
+        background-color: #555;
+      }
+
+
+      @media screen and (max-width: 768px) {
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #202020;
+        font-family: "Lexend", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 900;
+        font-style: normal;
+      }
+
+      .container {
+        margin-top: 15%;
+        width: 320px;
+        /* Ajustado el ancho máximo */
+        
+        
+        background-color: rgba(255, 255, 255, 0.884);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.493);
+      }
+
+      h1 {
+        text-align: center;
+        color: #ffffff;
+        font-size: 4.5ch;
+        margin-top: 12.5%;
+        margin-bottom: 3%;
+      }
+
+      .menu {
+        display: flex;
+        flex-direction: row;
+        /* Modificado para ordenar horizontalmente */
+        justify-content: space-between;
+        /* Distribuye los elementos horizontalmente */
+        align-items: center;
+        margin-top: -18px;
+        flex-wrap: wrap;
+        /* Envuelve los elementos en múltiples líneas si no caben en una sola */
+      }
+
+      .game-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.651);
+        padding: 12px;
+        border-radius: 10px;
+        margin-top: 25px;
+        box-shadow: 0 0 5px rgba(46, 46, 46, 0.493);
+        width: calc(33.33% - 29px);
+        /* Calcula el ancho de cada juego para que haya tres en una fila */
+      }
+
+      .game-box a {
+        display: block;
+        margin-bottom: 25px;
+        text-align: center;
+      }
+
+      .game-box img {
+        width: 87px;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+      }
+
+      .game-box img:hover {
+        transform: scale(1.085);
+      }
+
+      .back-button {
+        display: block;
+        padding: 12px 22px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        margin-top: 5%;
+        text-align: center;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-bottom: -0.5%;
+      }
+
+      .back-button:hover {
+        background-color: #555;
+      }
+      .til{
+        font-size: 1.4ch;
+      }
+      #redu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.651);
+        padding: 2px;
+        padding-left: 15px;
+        border-radius: 10px;
+        margin-top: 25px;
+        box-shadow: 0 0 5px rgba(46, 46, 46, 0.493);
+        width: calc(33.33% - 29px);
+        /* Calcula el ancho de cada juego para que haya tres en una fila */
+      }
+      .paj{
+        margin-left: -13.5px;
+        
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Menú de Juegos</h1>
+    <div class="container">
+      <div class="menu">
+        <div class="game-box" id="redu">
+          <h2 class="til">FLAPPY COIN</h2>
+          <a class="paj" href="bird.html">
+            <img src="img-G/paj.png" alt="Juego 1">
+          </a>
+        </div>
+        <div class="game-box">
+          <h2 class="til">ADIVINA</h2>
+          <a href="adivina.html">
+            <img src="img-G/que.png" alt="Juego 2">
+          </a>
+        </div>
+        <div class="game-box">
+          <h2 class="til">SNAKE</h2>
+          <a href="snake.html">
+            <img src="img-G/snk.png" alt="Juego 3">
+          </a>
+        </div>
+      </div>
+      <a href="first.html#section3" class="back-button">Volver a la Pantalla Principal</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Diario Digital</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #111;
+        color: #fff;
+        line-height: 1.6;
+      }
+
+      #contenido {
+        background-color: #fff;
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+      }
+
+      header {
+        background-color: #8d0130;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 36px;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+      }
+
+      nav ul li {
+        display: inline;
+        margin-right: 20px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      section h2 {
+        border-bottom: 2px solid #8d0130;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        color: #131313;
+      }
+
+      article {
+        margin-bottom: 30px;
+      }
+
+      article img {
+        max-width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        align-items: center;
+      }
+
+      article h3 {
+        margin-bottom: 10px;
+        color: #8d0130;
+      }
+
+      article p {
+        color: #242424;
+      }
+
+      footer {
+        background-color: #8d0130;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+
+      .destacado {
+        font-size: 24px;
+      }
+
+      .destacado p {
+        font-weight: bold;
+      }
+
+      .columnas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .columnas article {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+      }
+
+      .desordenado article {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .port {
+        width: 25%;
+      }
+
+      .columna-full {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .centrada {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+      }
+
+      #boton-izquierdo {
+        position: fixed;
+        left: 20px;
+        bottom: 20px;
+        z-index: 1000;
+      }
+
+      #boton-izquierdo button {
+        background-color: #8d0130;
+        color: #fff;
+        font-weight: bolder;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      #boton-izquierdo button:hover {
+        background-color: #6b0122;
+      }
+      @media screen and (max-width: 768px) {
+        .port{
+          width: 58%;
+        }
+        #contenido {
+        background-color: #fff;
+        padding: 20px;
+        margin: 0px auto;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+      }
+      .cent{
+        margin-top: 32%;
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img class="port" src="img-G/min.png" alt="Noticia">
+    </header>
+    <div id="contenido">
+      <section id="seccion-espanol">
+        <h2>Últimas Noticias</h2>
+        <article class="destacado">
+          <h3>Descubren nueva especie de mariposa en la Amazonía</h3>
+          <p>Un equipo de científicos ha descubierto una nueva especie de mariposa en la selva amazónica. La mariposa, bautizada como "Morpho amazonica", tiene un distintivo patrón de alas azules que la diferencia de otras especies similares. Este hallazgo podría tener importantes implicaciones para la conservación de la biodiversidad en la región.</p>
+          <img src="img-G/ma.jpg" alt="Noticia 1">
+        </article>
+        <div class="columnas">
+          <article>
+            <h3>El turismo rural experimenta un auge en España</h3>
+            <p>El turismo rural está experimentando un auge en España, con un aumento significativo en la demanda de alojamientos en entornos naturales y rurales. La tranquilidad y la belleza de los paisajes naturales españoles están atrayendo a turistas de todo el mundo en busca de experiencias auténticas y relajantes. Desde los impresionantes parques naturales hasta los encantadores pueblos medievales.</p>
+            <img src="img-G/vi.jpg" alt="Noticia 2">
+          </article>
+          <article>
+            <h3>Presentan nueva legislación para proteger el medio ambiente</h3>
+            <p>El gobierno ha presentado una nueva legislación para proteger el medio ambiente y abordar los desafíos del cambio climático. La ley incluye medidas para reducir las emisiones de gases de efecto invernadero, promover las energías renovables y proteger la biodiversidad en todo el país.</p>
+            <img src="img-G/env.jpg" alt="Noticia 4">
+          </article>
+        </div>
+        <article>
+          <h3>El futuro de la inteligencia artificial en la medicina</h3>
+          <p>Expertos en inteligencia artificial predicen que la tecnología jugará un papel cada vez más importante en el campo de la medicina en los próximos años. Desde diagnósticos más precisos hasta tratamientos personalizados, la IA tiene el potencial de revolucionar la atención médica y mejorar la salud de millones de personas en todo el mundo.</p>
+          <img src="img-G/inte.jpg" alt="Noticia 5">
+        </article>
+        <article>
+          <h3>El mercado de la moda se adapta a la sostenibilidad</h3>
+          <p>La industria de la moda está experimentando un cambio hacia la sostenibilidad y la responsabilidad social. Las marcas están adoptando prácticas más éticas y respetuosas con el medio ambiente en todas las etapas de la producción. Los consumidores están valorando cada vez más la transparencia y el impacto ambiental de la ropa que compran.</p>
+          <img src="img-G/mar.jpg" alt="Noticia 9">
+        </article>
+        <article>
+          <h3>Impulso en la investigación espacial</h3>
+          <p>Los esfuerzos de exploración espacial están recibiendo un impulso con nuevos proyectos y misiones planificadas. Se están realizando avances en la exploración de Marte, la Luna y otros cuerpos celestes. Los científicos están ansiosos por descubrir nuevos secretos del universo y expandir nuestro conocimiento del cosmos.</p>
+          <img class="centrada" src="img-G/cons.jpeg" alt="Noticia 10">
+        </article>
+        <div class="columnas">
+          <article>
+            <h3>El mercado de la música en línea continúa creciendo</h3>
+            <p>El mercado de la música en línea sigue experimentando un crecimiento significativo, con un aumento en el número de usuarios de servicios de streaming. Los artistas están aprovechando plataformas digitales para llegar a audiencias globales y compartir su música. Este cambio en el consumo de música está transformando la industria y cambiando la forma en que escuchamos y descubrimos nuevas canciones.</p>
+            <img src="img-G/can.jpg" alt="Noticia 11">
+          </article>
+          <article>
+            <h3>Camaleones: Maestros del camuflaje en la naturaleza</h3>
+            <p>Los camaleones son conocidos por su capacidad de cambiar de color y adaptarse a su entorno hasta el punto de casi desaparecer. Estos reptiles son verdaderos maestros del camuflaje, utilizan su habilidad para cazar presas y evitar depredadores. Los científicos están estudiando cómo los camaleones logran este camuflaje perfecto para inspirar nuevas tecnologías en el campo del diseño y la ingeniería.</p>
+            <img src="img-G/cam.jpg" class="cent" alt="Noticia 13">
+          </article>
+        </div>
+    </div>
+    </section>
+    </div>
+    <div id="boton-izquierdo">
+      <a href="first.html#section3">
+        <button>Volver al inicio</button>
+      </a>
+    </div>
+  </body>
+</html>

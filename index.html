@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/icon.ico">
+    <link rel="stylesheet" href="css/portada.css">
+    <title>DocMaps</title>
+    <style>
+        body {
+            overflow: hidden;
+        }
+        .container {
+            top: 0;
+            left: 5;
+            height: 100%;
+            width: 57%;
+            transition: transform 3s ease; 
+            margin-bottom: 50%;
+        }
+        .container.slide-up {
+            transform: translateY(-100%); 
+        }
+        .container.slide-down {
+            transform: translateY(100%); 
+        }
+        @media screen and (max-width: 768px) {
+            body {
+            overflow: hidden;
+        }
+        .container {
+            top: 90;
+            left: 5;
+            height: 100%;
+            width: 93%;
+            transition: transform 3s ease; 
+            margin-top: 60%;
+        }
+        .container.slide-up {
+            transform: translateY(-180%); 
+        }
+        .container.slide-down {
+            transform: translateY(100%); 
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="img/inici.png" alt="foto"/><br>
+    </div>
+
+<script>
+        //PRIMER SLIDER
+        document.addEventListener("DOMContentLoaded", function() {
+            
+            setTimeout(function() {
+                document.querySelector('.container').classList.add('slide-up');
+            }, 3000);
+
+            setTimeout(function() {
+                document.querySelector('.container').classList.add('slide-down');
+                window.location.href = 'login.html';
+            }, 5000); 
+        });
+</script>
+</body>
+</html>

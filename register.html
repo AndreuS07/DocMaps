@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/icoi.ico">
+    <title>Register</title>
+  </head>
+  <style>
+    body {
+      background-color: rgb(0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container-page {
+      height: 55vh;
+      width: 20vw;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      transition: all 0.8s;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid white;
+      backdrop-filter: blur(10px);
+    }
+
+    .register-container {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+    }
+
+    form {
+      width: 80%;
+      margin: auto;
+    }
+
+    .input-line-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 100%;
+      margin: 1rem 0;
+      font-weight: bold;
+    }
+
+    .name-input {
+      font-size: 15px;
+    }
+
+    .input-line {
+      width: 100%;
+      height: 30px;
+      background-color: transparent;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 2px solid #CBCBCB;
+      outline: none;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .button-register {
+      width: 100%;
+      height: 45px;
+      border-radius: 55px;
+      background: rgba(255, 255, 255, 0.089);
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      border: none;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .button-second {
+      width: 100%;
+      height: 45px;
+      border-radius: 55px;
+      background: transparent;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      border: 2px solid white;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: all 0.4s ease-in-out;
+      opacity: 0.6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .button-register:hover {
+      box-shadow: 0px 0px 8px #ffffff74;
+    }
+
+    .button-second:hover {
+      opacity: 1;
+    }
+
+    .gif1 {
+      display: flex;
+      height: 70vh;
+    }
+
+    .gif1 video {
+      max-width: 100%;
+      max-height: 100%;
+      margin-top: 10%;
+    }
+
+    .title {
+      font-size: 4.2ch;
+      font-weight: bolder;
+    }
+
+    .link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    @media screen and (max-width: 768px) {
+
+      body {
+      background-color: rgb(0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container-page {
+      height: 56vh;
+      width: 67vw;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      transition: all 0.8s;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid white;
+      backdrop-filter: blur(10px);
+      margin-bottom: -61%;
+    }
+
+    .register-container {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      margin-top: 7%;
+    }
+
+    form {
+      width: 80%;
+      margin: auto;
+    }
+
+    .input-line-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 100%;
+      margin: 1rem 0;
+      font-weight: bold;
+    }
+
+    .name-input {
+      font-size: 15px;
+    }
+
+    .input-line {
+      width: 100%;
+      height: 30px;
+      background-color: transparent;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 2px solid #CBCBCB;
+      outline: none;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .button-register {
+      width: 100%;
+      height: 45px;
+      border-radius: 55px;
+      background: rgba(255, 255, 255, 0.089);
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      border: none;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .button-second {
+      width: 100%;
+      height: 45px;
+      border-radius: 55px;
+      background: transparent;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      border: 2px solid white;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: all 0.4s ease-in-out;
+      opacity: 0.6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .button-register:hover {
+      box-shadow: 0px 0px 8px #ffffff74;
+    }
+
+    .button-second:hover {
+      opacity: 1;
+    }
+
+    .gif1 {
+      display: flex;
+      height: 70vh;
+    }
+
+    .gif1 video {
+      max-width: 100%;
+      max-height: 100%;
+      margin-top: 10%;
+    }
+
+    .title {
+      font-size: 4.2ch;
+      font-weight: bolder;
+    }
+
+    .link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .gif1 video {
+      position: absolute;
+      max-width: 80%;
+      max-height: 80%;
+      margin-top: -36%;
+      margin-left: -2.3%;
+
+    }
+  }
+  </style>
+  <body>
+    <div class="gif1">
+      <video autoplay muted loop>
+        <source src="img/vid.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="container-page" id="Container">
+      <div class="register-container" id="RegisterContainer">
+        <h1 class="title">REGISTER</h1>
+        <form action="">
+          <div class="input-line-container">
+            <span class="name-input">Name</span>
+            <input type="text" name="name" class="input-line" id="">
+          </div>
+          <div class="input-line-container">
+            <span class="name-input">Email</span>
+            <input type="email" name="email" class="input-line" id="">
+          </div>
+          <div class="input-line-container">
+            <span class="name-input">Username</span>
+            <input type="text" name="username" class="input-line" id="">
+          </div>
+          <div class="input-line-container">
+            <span class="name-input">Password</span>
+            <input type="password" name="password" class="input-line" id="">
+          </div>
+          <input type="button" value="register" class="button-register">
+          <a href="login.html" class="link">
+            <div id="Login" class="button-second">LOG IN</div>
+          </a>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
