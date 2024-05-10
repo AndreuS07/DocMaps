@@ -70,7 +70,7 @@
     width: 79%; /* Reduciendo el ancho al 50% */
     height: auto;
     max-width: none; /* Eliminando el ancho máximo */
-    margin-top: 2%; /* Ajustando el margen superior */
+    margin-top: -9%; /* Ajustando el margen superior */
     margin-left: -2.8%; /* Ajustando el margen izquierdo */
   }
 }
@@ -84,10 +84,10 @@
       }
       @media screen and (max-width: 768px) {
         #fleImage{
-    width: 14%; /* Reduciendo el ancho al 50% */
+    width: 10%; /* Reduciendo el ancho al 50% */
     height: auto;
     max-width: none; /* Eliminando el ancho máximo */
-    margin-top: -3%; /* Ajustando el margen superior */
+    margin-top: -16%; /* Ajustando el margen superior */
     margin-left: -4.5%; /* Ajustando el margen izquierdo */
   }
 }
@@ -106,7 +106,7 @@
     width: 64%; /* Reduciendo el ancho al 50% */
     height: auto;
     max-width: none; /* Eliminando el ancho máximo */
-    margin-top: 12%; /* Ajustando el margen superior */
+    margin-top: 9.6%; /* Ajustando el margen superior */
     margin-left: -2.7%; /* Ajustando el margen izquierdo */
     margin-bottom: 40%;
   }
@@ -156,6 +156,43 @@
         max-height: 80%;
         margin-bottom: 20px;
       }
+
+      @media screen and (max-width: 768px) {
+
+.menu-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 43px;
+    position: absolute;
+    top: -23px;
+    right: 35px;
+    border-radius: 30%;
+    z-index: 1001;
+}
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    max-width: 80px;
+    /* Tamaño mediano del logotipo */
+    z-index: 9999;
+    /* Aseguramos que esté encima de otros elementos */
+    padding-top: 4px;
+  }
+}
+
+
+
+
+
     </style>
   </head>
   <body>
